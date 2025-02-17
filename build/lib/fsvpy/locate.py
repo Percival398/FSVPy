@@ -56,7 +56,7 @@ def preprocess_image(image, low_sigma = 1, blur_sigma = 3):
 
     '''
 def locate_streaks(image, contour_value = None):
-
+    print("bluid")
     if contour_value == None:
         contour_value = 5*np.std(image)
   
