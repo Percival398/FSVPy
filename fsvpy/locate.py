@@ -57,12 +57,10 @@ def preprocess_image(image, low_sigma = 1, blur_sigma = 3):
     '''
 def locate_streaks(image, contour_value = None):
 
-    processed_image = preprocess_image(image)
-
     if contour_value == None:
-        contour_value = 5*np.std(processed_image)
+        contour_value = 5*np.std(image)
   
-    contours =  skimage.measure.find_contours(processed_image, contour_value) 
+    contours =  skimage.measure.find_contours(image, contour_value) 
 
     return contours
 
